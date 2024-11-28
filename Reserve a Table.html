@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/premium_vector-1730515692314-ba66a6869cc2.avif" type="image/png">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #fff; /* خلفية بيضاء */
+            color: #4e3629; /* لون النص بني */
+            margin: 0;
+            padding: 0;
+        }
+
+        .reservation-section {
+            background-color: #fff; /* خلفية بيضاء */
+            padding: 100px 0;
+            color: #4e3629; /* النص باللون البني */
+            text-align: center;
+            position: relative;
+        }
+
+        .reservation-form {
+            background-color: #fff; /* خلفية بيضاء للنموذج */
+            border-radius: 10px;
+            padding: 30px;
+            width: 60%;
+            margin: 0 auto;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* box shadow */
+        }
+
+        .section-title {
+            color: #4e3629; /* اللون البني للنص */
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #4e3629; /* اللون البني لحواف المدخلات */
+        }
+
+        .btn {
+            background-color: #4e3629; /* اللون البني للأزرار */
+            color: white;
+            border: 2px solid #4e3629; /* حدود الأزرار بنفس اللون */
+            padding: 10px 20px;
+            width: 100%;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: white; /* الخلفية بيضاء عند التمرير */
+            color: #4e3629; /* النص بني عند التمرير */
+            border-color: #4e3629; /* حدود البني عند التمرير */
+            transform: scale(1.05);
+        }
+
+        .btn:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .back-btn {
+            background-color: #4e3629; /* اللون البني للزر */
+            color: white;
+            border: 2px solid #4e3629;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-btn a
+        {
+text-decoration: none;
+/* margin-top: 30px; */
+color: #fff;
+        }
+        .back-btn a:hover
+        {
+color: #4e3629;
+        }
+
+        .back-btn:hover {
+            background-color: white; /* الخلفية بيضاء عند التمرير */
+            color: #4e3629; /* النص بني عند التمرير */
+            border-color: #4e3629; /* حدود البني عند التمرير */
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="reservation-section">
+        <div class="container">
+        
+            <div class="reservation-form">
+ <h2 class="section-title">Reserve Your Table</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Reservation Date</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Reservation Time</label>
+                        <input type="time" class="form-control" id="time">
+                    </div>
+                    <div class="mb-3">
+                        <label for="guests" class="form-label">Number of Guests</label>
+                        <input type="number" class="form-control" id="guests" placeholder="Enter number of guests">
+                    </div>
+                    <button type="submit" class="btn mb-4">Reserve Table</button>
+                </form>
+
+                <!-- Back to Home button -->
+         <button class="back-btn">  <a href="index.html" >Back to Home</a></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

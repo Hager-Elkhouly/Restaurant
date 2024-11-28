@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Now</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="image/premium_vector-1730515692314-ba66a6869cc2.avif" type="image/png">
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Reset some default styles */
+      body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+  
+
+      /* Order Section */
+      .order-section {
+        padding: 40px 20px;
+        /* background-color: #f4f4f4; */
+        width: 80%;
+        margin: auto;
+            /* max-width: 600px; */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .order-section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .order-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .form-group label {
+        font-size: 1.1rem;
+        color: #4e3629;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+      }
+
+      .btn-submit {
+        background-color: #4e3629;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-submit:hover {
+        background-color: #fff; /* Light Brown on hover */
+        color: #4e3629;
+       
+      }
+
+      .back-btn {
+            background-color: #4e3629; /* اللون البني للزر */
+            color: white;
+            border: 2px solid #4e3629;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-btn a
+        {
+text-decoration: none;
+/* margin-top: 30px; */
+color: #fff;
+font-size: 1.2rem;
+        }
+        .back-btn a:hover
+        {
+color: #4e3629;
+        }
+
+        .back-btn:hover {
+            background-color: white; /* الخلفية بيضاء عند التمرير */
+            color: #4e3629; /* النص بني عند التمرير */
+         
+        }
+
+    </style>
+  </head>
+  <body>
+
+
+    <!-- Order Form -->
+    <section class="order-section">
+      <div class="container">
+        <h2>Place Your Order</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="order">Select Your Order</label>
+            <select id="order" name="order" required>
+              <option value="pizza">Margherita Pizza</option>
+              <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+              <option value="BBQ Chicken Pizza">BBQ Chicken Pizza</option>
+              <option value="Fruit plate">Fruit plate</option>
+              <option value="Ice Cream">Ice Cream</option>
+              <option value="Pancake">Pancake</option>
+              <option value="Juice">Juice</option>
+              <option value="Smoothie">Smoothie</option>
+              <option value="Coffee">Coffee</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+          <!-- Payment Information Section -->
+          <div class="payment-info">
+           
+            <div class="form-group">
+              <label for="card-number">Card Number (Visa)</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card-number"
+                placeholder="1234 5678 9101 1121"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="expiry-date">Expiry Date</label>
+              <input
+                type="month"
+                id="expiry-date"
+                name="expiry-date"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="123"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">Order Now</button> 
+                      <!-- Back to Home button -->
+          <button class="back-btn">  <a href="index.html" >Back to Home</a></button> 
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
